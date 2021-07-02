@@ -538,7 +538,7 @@ label {
     margin-bottom: 4px;
 }
 
-/* Galeri */
+/* Kitaplar ve Filmler */
 
 .galeri {
     display: grid;
@@ -573,6 +573,11 @@ label {
     border-radius: 20px;
 }
 
+.container-kitap {
+    width: 300px;
+    height: 480px;
+}
+
 /* Responsive */
 
 @media (max-width: 1600px) {
@@ -605,6 +610,11 @@ label {
 
     .footer {
         padding: 0 50px;
+    }
+
+    .container-kitap {
+        width: 200px;
+        height: 360px;
     }
 }
 
