@@ -491,7 +491,6 @@ article p {
 
 .form {
     display: grid;
-    grid-gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-areas: 
     "kayit"
@@ -538,6 +537,43 @@ label {
     display: inline-block;
     margin-bottom: 4px;
 }
+
+/* Galeri */
+
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(minmax(400px, 1fr));
+    grid-template-areas: 
+    "album"
+    "footer"
+    "footer-copy";
+}
+
+.album {
+    grid-area: album;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.galeri-album {
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.container-foto {
+    width: 380px;
+}
+
+.album-foto {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Responsive */
 
 @media (max-width: 1600px) {
 
