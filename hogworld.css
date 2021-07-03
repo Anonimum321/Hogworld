@@ -60,7 +60,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 70px;
+    padding: 10px 30px;
     margin-bottom: 40px;
 }
 
@@ -619,6 +619,31 @@ label {
 }
 
 @media (max-width: 840px) {
+
+    .menu-l {
+        padding: 0;
+    }
+
+    .menu-l ul {
+        text-align: center;
+    }
+
+    .menu-list #ana,
+    .menu-list #gry,
+    .menu-list #sly,
+    .menu-list #rav,
+    .menu-list #huf {
+        padding: 0;
+    }
+
+    .menu-list #ana:hover, 
+    .menu-list #gry:hover,
+    .menu-list #sly:hover,
+    .menu-list #rav:hover,
+    .menu-list #huf:hover {
+        border-radius: 5px;
+        padding: 0;
+    }
     
     .godric-div {
         grid-template-areas: 
@@ -657,7 +682,7 @@ label {
         padding: 0;
     }
 
-    .menu-l {
-        padding: 5px 5px;
+    .container-foto {
+        width: 340px;
     }
 }
