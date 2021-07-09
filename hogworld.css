@@ -700,4 +700,9 @@ label {
     .container-foto {
         width: 340px;
     }
+
+    .sosyal-logo a i {
+        font-size: 20px;
+        padding: 10px;
+    }
 }
