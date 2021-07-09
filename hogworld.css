@@ -56,12 +56,38 @@ a {
 
 /* Header & Nav-Bar */
 
-header {
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    height: 150px;
+    grid-template-areas: "hoglogo nav-bar contact";
+}
+
+.hoglogo {
+    grid-area: hoglogo;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    margin-bottom: 40px;
+    margin: auto;
+}
+
+.nav-bar {
+    grid-area: nav-bar;
+    display: flex;
+    margin: auto;
+}
+
+.contact {
+    grid-area: contact;
+    display: flex;
+    margin: auto;
+}
+
+.main {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
 }
 
 .logo {
@@ -198,31 +224,27 @@ h2, h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-areas: 
-    "kurucu-1    kurucu-2    kurucu-3    kurucu-4"
+    "header      header      header      header"
+    "kurucu      kurucu      kurucu      kurucu"
     "tren        tren        tren        tren"
     "footer      footer      footer      footer"
     "footer-copy footer-copy footer-copy footer-copy";
 }
 
-.kurucu-1 {
-    grid-area: kurucu-1;
+.kurucu {
+    grid-area: kurucu;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.kurucu-2 {
-    grid-area: kurucu-2;
-    display: flex;
-}
-
-.kurucu-3 {
-    grid-area: kurucu-3;
-    display: flex;
-}
-
-.kurucu-4 {
-    grid-area: kurucu-4;
-    display: flex;
-    padding-right: 20px;
+.kur {
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    width: 350px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 30px;
 }
 
 .kurucu-foto {
@@ -343,7 +365,8 @@ article p {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin: auto;
     font-size: 20px;
-    grid-template-areas: 
+    grid-template-areas:
+    "header         header          header"
     "ortak-salon    ortak-salon     bina-sbar"
     "bina-article   bina-article    bina-sbar"
     "footer         footer          footer"
@@ -493,6 +516,7 @@ article p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-areas: 
+    "header"
     "kayit"
     "iletisim"
     "footer"
@@ -544,6 +568,7 @@ label {
     display: grid;
     grid-template-columns: repeat(minmax(400px, 1fr));
     grid-template-areas: 
+    "header"
     "album"
     "footer"
     "footer-copy";
@@ -582,20 +607,14 @@ label {
 
 @media (max-width: 1600px) {
 
-    .kurucular {
-        grid-template-areas: 
-        "kurucu-1    kurucu-2"
-        "kurucu-3    kurucu-4"
-        "tren        tren"
-        "footer      footer"
-        "footer-copy footer-copy";
-    }  
+     
 }
 
 @media (max-width:1400px) {
 
     .binalar {
         grid-template-areas:
+        "header"
         "ortak-salon"
         "bina-sbar"
         "bina-article"
@@ -646,7 +665,8 @@ label {
     }
     
     .godric-div {
-        grid-template-areas: 
+        grid-template-areas:
+        "header" 
         "godric-img" 
         "godric-sidebar"
         "godric-article"
@@ -664,10 +684,8 @@ label {
 
     .kurucular {
         grid-template-areas: 
-        "kurucu-1" 
-        "kurucu-2"
-        "kurucu-3" 
-        "kurucu-4"
+        "header"
+        "kurucu"
         "tren"
         "footer"
         "footer-copy";
