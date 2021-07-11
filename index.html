@@ -18,30 +18,23 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-    <div class="kurucular">
-        <div class="header">
-            <div class="hoglogo">
-                <img class="logo" src="img/hog-trans-2.png" alt="Hogwarts">
-            </div>
-            <div class="nav-bar">
-                <div class="menu-l">
-                    <ul class="menu-list">
-                        <li><a id="ana" href="index.html"><i class="fas fa-home"></i></a></li>
-                        <li><a id="ana" href="gryffindor.html">Gryffindor</a></li>
-                        <li><a id="ana" href="slytherin.html">Slytherin</a></li>
-                        <li><a id="ana" href="ravenclaw.html">Ravenclaw</a></li>
-                        <li><a id="ana" href="hufflepuff.html">Hufflepuff</a></li>
-                        <li><a id="ana" href="kitaplar.html">Kitaplar</a></li>
-                        <li><a id="ana" href="filmler.html">Filmler</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="contact">
-                <a href="kayıt.html"><button type="button" class="btn">İletişim</button></a>
-            </div>
-        </div>
-        <div class="kurucu">
+<body class="kurucular">
+        <header class="header">
+            <a class="header-logo1" href="index.html"><img class="logo" src="img/hog-trans-2.png" alt="Hogwarts"></a>
+            <nav class="nav-bar">
+                <ul class="nav-bar-list">
+                    <li><a id="ana" href="gryffindor.html">Gryffindor</a></li>
+                    <li><a id="ana" href="slytherin.html">Slytherin</a></li>
+                    <li><a id="ana" href="ravenclaw.html">Ravenclaw</a></li>
+                    <li><a id="ana" href="hufflepuff.html">Hufflepuff</a></li>
+                    <li><a id="ana" href="kitaplar.html">Books</a></li>
+                    <li><a id="ana" href="filmler.html">Movies</a></li>
+                </ul>
+            </nav>
+            <a class="header-logo2" href="index.html"><img class="logo" src="img/albus-dumbledore-dark.png"
+                    alt="Albus Dumbledore Photo"></a>
+        </header>
+        <main class="founder">
             <div class="kur">
                 <a href="godric_gyriffindor.html">
                     <img class="kurucu-foto" src="img/godric-gryffindor.jpg" alt="Godric Gryffindor">
@@ -86,7 +79,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </main>
         <div class="tren">
             <div>
                 <h2>Platform 9¾</h2>
@@ -95,27 +88,33 @@
                 <blockquote>
                     <i>"The Hogwarts Express is a 4-6-0 Hall Class steam locomotive model number GWR 5900. It is quite
                         impressive."</i>
-                </blockquote><br>
-                — Hogwarts Express conductor
+                    <figcaption style="font-weight: lighter;">— Hogwarts Express conductor</figcaption>
+                </blockquote>
+
                 </p>
             </div>
         </div>
-        <div class="footer">
-            <img class="self-img" src="img/msmall.png" alt="Coder">
-            <div class="sosyal-logo">
-                <a id="facebook" href="#"><i class="fab fa-facebook"></i></a>
-                <a id="twitter" href="#"><i class="fab fa-twitter"></i></a>
-                <a id="instagram" href="#"><i class="fab fa-instagram"></i></a>
-                <a id="linkedin" href="#"><i class="fab fa-linkedin"></i></a>
-                <a id="discord" href="#"><i class="fab fa-discord"></i></a>
+        <footer class="footer">
+            <div class="footer-social-logo">
+                <a id="facebook" href="https://www.facebook.com/muratulker321" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a id="twitter" href="https://twitter.com/muratulker1993" target="_blank"><i
+                        class="fab fa-twitter"></i></a>
+                <a id="instagram" href="https://www.instagram.com/muratulker93/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a id="linkedin" href="https://www.linkedin.com/in/muratulker93/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
             </div>
-        </div>
-        <div class="footer-copy">
-            <p>
-                HP Proje © 2021 - Tüm Hakları Saklıdır.
-            </p>
-        </div>
-    </div>
+            <div class="footer-coder">
+                <img class="footer-coder-img" src="img/msmall.png" alt="Coder">
+                <a class="contact btn" href="kayıt.html">İletişim</a>
+            </div>
+            <div class="footer-copyright">
+                <p>
+                    Harry Potter Project © 2021 - All Rights Reserved.
+                </p>
+            </div>
+        </footer>
 </body>
 
 </html>

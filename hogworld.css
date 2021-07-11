@@ -61,26 +61,26 @@ a {
     display: grid;
     grid-template-columns: 150px 1fr 150px;
     height: 150px;
-    grid-template-areas: "hoglogo nav-bar contact";
+    grid-template-areas: "header-logo1 nav-bar header-logo2";
     font-size: 20px;
 }
 
-.hoglogo {
-    grid-area: hoglogo;
+.header-logo1 {
+    grid-area: header-logo1;
     display: flex;
     margin: auto;
+    width: 100px;
 }
 
-.nav-bar {
-    grid-area: nav-bar;
+.header-logo2 {
+    grid-area: header-logo2;
     display: flex;
     margin: auto;
+    width: 100px;
 }
 
-.contact {
-    grid-area: contact;
-    display: flex;
-    margin: auto;
+.logo {
+    width: 100%;
 }
 
 .main {
@@ -91,30 +91,94 @@ a {
     grid-area: sidebar;
 }
 
-.logo {
-    width: 100px;
+.nav-bar {
+    grid-area: nav-bar;
+    display: flex;
+    margin: auto;
 }
 
-.menu-l {
+.nav-bar-list {
+    list-style: none;
     background-color: rgba(0, 0, 0, .3);
     padding: 30px 30px;
     border-radius: 40px;
 }
 
-.menu-list {
-    list-style: none;
-}
-
-.menu-list a {
+.nav-bar-list a {
     color: #000;
     text-decoration: none;
     font-weight: 600;
 }
 
-.menu-list li {
+.nav-bar-list li {
     display: inline-block;
     padding: 0 20px;
     color: #000;
+}
+
+.nav-bar-list #ana {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.nav-bar-list #ana:hover {
+    color: #fff;
+    background-image: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    transition: all .3s ease-in-out;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.nav-bar-list #gry {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.nav-bar-list #gry:hover {
+    color: #fff;
+    background-image: linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% );
+    transition: all .4s ease-out;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.nav-bar-list #sly {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.nav-bar-list #sly:hover {
+    color: #fff;
+    background-image: linear-gradient( 102.1deg,  rgba(96,221,142,1) 8.7%, rgba(24,138,141,1) 88.1% );
+    transition: all .3s ease-out;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.nav-bar-list #rav {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.nav-bar-list #rav:hover {
+    color: #fff;
+    background-image: linear-gradient( 179.4deg,  rgba(33,150,243,1) 1.8%, rgba(22,255,245,0.60) 97.1% );
+    transition: all .3s ease-out;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.nav-bar-list #huf {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.nav-bar-list #huf:hover {
+    color: #fff;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,252,200,1) 0%, rgba(255,247,94,1) 90% );
+    transition: all .3s ease-out;
+    border-radius: 30px;
+    padding: 10px;
 }
 
 .btn {
@@ -137,78 +201,13 @@ a {
     display: inline-block;
 }
 
-.menu-list #ana {
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.menu-list #ana:hover {
-    color: #fff;
-    background-image: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-    transition: all .3s ease-in-out;
-    border-radius: 30px;
-    padding: 10px;
-}
-
-.menu-list #gry {
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.menu-list #gry:hover {
-    color: #fff;
-    background-image: linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% );
-    transition: all .4s ease-out;
-    border-radius: 30px;
-    padding: 10px;
-}
-
-.menu-list #sly {
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.menu-list #sly:hover {
-    color: #fff;
-    background-image: linear-gradient( 102.1deg,  rgba(96,221,142,1) 8.7%, rgba(24,138,141,1) 88.1% );
-    transition: all .3s ease-out;
-    border-radius: 30px;
-    padding: 10px;
-}
-
-.menu-list #rav {
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.menu-list #rav:hover {
-    color: #fff;
-    background-image: linear-gradient( 179.4deg,  rgba(33,150,243,1) 1.8%, rgba(22,255,245,0.60) 97.1% );
-    transition: all .3s ease-out;
-    border-radius: 30px;
-    padding: 10px;
-}
-
-.menu-list #huf {
-    border-radius: 50%;
-    padding: 10px;
-}
-
-.menu-list #huf:hover {
-    color: #fff;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,252,200,1) 0%, rgba(255,247,94,1) 90% );
-    transition: all .3s ease-out;
-    border-radius: 30px;
-    padding: 10px;
-}
-
 /* main */
 
 main p {
     text-align: justify;
 }
 
-.kurucu img:hover {
+.founder img:hover {
     filter: opacity(.8);
     transition: all .3s ease-out;
 }
@@ -223,15 +222,15 @@ h2, h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-areas: 
-    "header      header      header      header"
-    "kurucu      kurucu      kurucu      kurucu"
-    "tren        tren        tren        tren"
-    "footer      footer      footer      footer"
-    "footer-copy footer-copy footer-copy footer-copy";
+    "header"
+    "founder"
+    "tren"
+    "footer"
+    "footer-copy";
 }
 
-.kurucu {
-    grid-area: kurucu;
+.founder {
+    grid-area: founder;
     display: flex;
     flex-wrap: wrap;
 }
@@ -287,8 +286,7 @@ h2, h3 {
     "header              header"
     "godric-img          godric-sidebar"
     "godric-article      godric-article"
-    "footer              footer"
-    "footer-copy         footer-copy";
+    "footer              footer";
 }
 
 .godric-img {
@@ -311,7 +309,7 @@ h2, h3 {
     padding: 20px 20px;
 }
 
-.godric-article h2, .binalar h2 {
+.godric-article h2, .houses h2 {
     text-align: left;
     margin-bottom: 10px;
 }
@@ -355,9 +353,9 @@ article p {
     transition: .3s ease-out;
 }
 
-/* Binalar */
+/* Houses */
 
-.binalar {
+.houses {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin: auto;
@@ -365,8 +363,7 @@ article p {
     "header         header          header"
     "ortak-salon    ortak-salon     bina-sbar"
     "bina-article   bina-article    bina-sbar"
-    "footer         footer          footer"
-    "footer-copy    footer-copy     footer-copy";
+    "footer         footer          footer";
 }
 
 .ortak-salon {
@@ -424,82 +421,105 @@ article p {
 }
 
 .footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit minmax(400px, 1fr));
     grid-area: footer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: rgba(0, 0, 0, .3);
-    padding: 0 100px;
-    margin-top: 30px;
+    grid-template-areas: 
+        "footer-coder     footer-social-logo"
+        "footer-copyright footer-copyright";
 }
 
-.footer-copy {
-    grid-area: footer-copy;
-    background-color: rgba(0, 0, 0, 0.685);
-    padding: 20px 20px;
+.footer-coder {
+    display: grid;
+    grid-area: footer-coder;
+    grid-template-areas: 
+    "footer-coder-img"
+    "contact";
 }
 
-.footer-copy p {
-    text-align: center;
-    color: #fff;
+.contact {
+    grid-area: contact;
+    display: flex;
+    margin: auto;
 }
 
-.self-img {
+.footer-coder-img {
     height: 200px;
     object-fit: contain;
+    grid-area: footer-coder-img;
+    display: flex;
+    margin: auto;
 }
 
-.sosyal-logo a i {
+.footer-copyright {
+    grid-area: footer-copyright;
+    padding: 20px;
+}
+
+.footer-copyright p {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.footer-social-logo {
+    grid-area: footer-social-logo;
+    display: flex;
+    margin: auto;
+}
+
+.footer-social-logo a i {
     font-size: 30px;
     padding: 10px;
 }
 
-.sosyal-logo #facebook {
+.footer-social-logo #facebook {
     color: #fff;
     transition: 0.3s ease-out;
 }
 
-.sosyal-logo #facebook:hover {
+.footer-social-logo #facebook:hover {
     color: #3b5998;
     transition: 0.3s ease-out;
 }
 
-.sosyal-logo #twitter {
+.footer-social-logo #twitter {
     color: #fff;
     transition: 0.3s ease-out;
 }
 
-.sosyal-logo #twitter:hover {
+.footer-social-logo #twitter:hover {
     color: #00aced;
     transition: 0.3s ease-out;
 }
 
-.sosyal-logo #instagram {
+.footer-social-logo #instagram {
     color: #fff;
     transition: 0.3s ease-out;
 }
 
-.sosyal-logo #instagram:hover {
+.footer-social-logo #instagram:hover {
     color: #E1306C;
     transition: 0.3s ease-out;
 }
 
-.sosyal-logo #linkedin {
+.footer-social-logo #linkedin {
     color: #fff ;
     transition: 0.3s ease-out;
 }
 
-.sosyal-logo #linkedin:hover {
+.footer-social-logo #linkedin:hover {
     color: #007bb6;
     transition: 0.3s ease-out;
 }
 
-.sosyal-logo #discord {
+.footer-social-logo #discord {
     color: #fff;
     transition: 0.3s ease-out;
 }
 
-.sosyal-logo #discord:hover {
+.footer-social-logo #discord:hover {
     color: #00adfdcc;
     transition: 0.3s ease-out;
 }
@@ -513,8 +533,7 @@ article p {
     "header"
     "kayit"
     "iletisim"
-    "footer"
-    "footer-copy";
+    "footer";
 }
 
 .kayit {
@@ -559,8 +578,7 @@ label {
     grid-template-areas: 
     "header"
     "album"
-    "footer"
-    "footer-copy";
+    "footer";
 }
 
 .album {
@@ -596,23 +614,18 @@ label {
 
 @media (max-width:1400px) {
 
-    .binalar {
+    .houses {
         grid-template-areas:
         "header"
         "ortak-salon"
         "bina-sbar"
         "bina-article"
-        "footer"
-        "footer-copy";        
+        "footer";        
     }
 
     .figures {
         display: flex;
         width: 200px;
-    } 
-
-    .footer {
-        padding: 0 50px;
     }
 
     .container-kitap {
@@ -631,27 +644,19 @@ label {
         font-size: 14px;
     }
 
-    .menu-l {
+    .nav-bar-list #ana,
+    .nav-bar-list #gry,
+    .nav-bar-list #sly,
+    .nav-bar-list #rav,
+    .nav-bar-list #huf {
         padding: 0;
     }
 
-    .menu-l ul {
-        text-align: center;
-    }
-
-    .menu-list #ana,
-    .menu-list #gry,
-    .menu-list #sly,
-    .menu-list #rav,
-    .menu-list #huf {
-        padding: 0;
-    }
-
-    .menu-list #ana:hover, 
-    .menu-list #gry:hover,
-    .menu-list #sly:hover,
-    .menu-list #rav:hover,
-    .menu-list #huf:hover {
+    .nav-bar-list #ana:hover, 
+    .nav-bar-list #gry:hover,
+    .nav-bar-list #sly:hover,
+    .nav-bar-list #rav:hover,
+    .nav-bar-list #huf:hover {
         border-radius: 5px;
         padding: 0;
     }
@@ -662,25 +667,15 @@ label {
         "godric-img" 
         "godric-sidebar"
         "godric-article"
-        "footer"
-        "footer-copy";
+        "footer";
     }
 
-    .kurucu {
+    .founder {
         padding: 10px;
     }
 
     .ortak-salon img {
         width: 360px;
-    }
-
-    .kurucular {
-        grid-template-areas: 
-        "header"
-        "kurucu"
-        "tren"
-        "footer"
-        "footer-copy";
     }
 
     .figures {
@@ -689,14 +684,18 @@ label {
     }  
 
     .footer {
-        padding: 0;
+        grid-template-areas: 
+        "footer-coder-img" 
+        "footer-social-logo"
+        "contact"
+        "footer-copyright";
     }
 
     .container-foto {
         width: 340px;
     }
 
-    .sosyal-logo a i {
+    .footer-social-logo a i {
         font-size: 20px;
         padding: 10px;
     }

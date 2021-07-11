@@ -16,51 +16,44 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-    <div class="form">
-        <div class="header">
-            <div class="hoglogo">
-                <img class="logo" src="img/hog-trans-2.png" alt="Hogwarts">
-            </div>
-            <div class="nav-bar">
-                <div class="menu-l">
-                    <ul class="menu-list">
-                        <li><a id="ana" href="index.html"><i class="fas fa-home"></i></a></li>
-                        <li><a id="ana" href="gryffindor.html">Gryffindor</a></li>
-                        <li><a id="ana" href="slytherin.html">Slytherin</a></li>
-                        <li><a id="ana" href="ravenclaw.html">Ravenclaw</a></li>
-                        <li><a id="ana" href="hufflepuff.html">Hufflepuff</a></li>
-                        <li><a id="ana" href="kitaplar.html">Kitaplar</a></li>
-                        <li><a id="ana" href="filmler.html">Filmler</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="contact">
-                <img src="img/albus-dumbledore-400x400.png" alt="Albus Percival Wulfric Brian Dumbledore" class="logo">
-            </div>
-        </div>
-        <div class="kayit">
+<body class="form">
+        <header class="header">
+            <a class="header-logo1" href="index.html"><img class="logo" src="img/hog-trans-2.png" alt="Hogwarts"></a>
+            <nav class="nav-bar">
+                <ul class="nav-bar-list">
+                    <li><a id="ana" href="gryffindor.html">Gryffindor</a></li>
+                    <li><a id="ana" href="slytherin.html">Slytherin</a></li>
+                    <li><a id="ana" href="ravenclaw.html">Ravenclaw</a></li>
+                    <li><a id="ana" href="hufflepuff.html">Hufflepuff</a></li>
+                    <li><a id="ana" href="kitaplar.html">Kitaplar</a></li>
+                    <li><a id="ana" href="filmler.html">Filmler</a></li>
+                </ul>
+            </nav>
+            <img class="header-logo2" src="img/albus-dumbledore-400x400.png"
+                alt="Albus Percival Wulfric Brian Dumbledore">
+        </header>
+        <main class="kayit">
             <form action="">
                 <h2>Kayıt Formu</h2>
                 <div class="inp">
                     <label for="fname">Adınız Soyadınız:</label>
-                    <input type="text" name="fname" id="">
+                    <input type="text" name="fname" id="fname">
                 </div>
                 <div class="inp">
                     <label for="tel">Telefon:</label>
-                    <input type="tel" name="tel" id="">
+                    <input type="tel" name="tel" id="tel">
                 </div>
                 <div class="inp">
                     <label for="email">E-Mail:</label>
-                    <input type="email" name="email" id="">
+                    <input type="email" name="email" id="email">
                 </div>
                 <div class="inp">
                     <label for="password">Şifre:</label>
-                    <input type="password" name="password" id="">
+                    <input type="password" name="password" id="password">
                 </div>
-                <label for="password">Şehir</label>
-                <select name="sehir" id="">
-                    <option value="---" selected>---</option>
+                <label for="sehir">Şehir</label>
+                <select name="sehir" id="sehir">
+                    <option value="---" selected disabled>---</option>
                     <option value="Adana">Adana</option>
                     <option value="Adıyaman">Adıyaman</option>
                     <option value="Afyonkarahisar">Afyonkarahisar</option>
@@ -144,31 +137,31 @@
                     <option value="Düzce">Düzce</option>
                 </select>
                 <button type="submit" class="btn btn-sifirla">Kayıt</button>
-                <button type="submit" class="btn btn-sifirla">Sıfırla</button>
+                <button type="reset" class="btn btn-sifirla">Sıfırla</button>
             </form>
-        </div>
+        </main>
         <div class="iletisim">
             <form action="">
                 <h2>İletişim Formu</h2>
                 <div class="inp">
                     <label for="fname">Adınız Soyadınız:</label>
-                    <input type="text" name="fname" id="">
+                    <input type="text" name="fname" id="fname">
                 </div>
                 <div class="inp">
                     <label for="tel">Telefon:</label>
-                    <input type="tel" name="tel" id="">
+                    <input type="tel" name="tel" id="tel">
                 </div>
                 <div class="inp">
                     <label for="email">E-Mail:</label>
-                    <input type="email" name="email" id="">
+                    <input type="email" name="email" id="email">
                 </div>
                 <div class="inp">
                     <label for="message">Mesaj:</label>
-                    <textarea name="message" id="" cols="25" rows="5"></textarea>
+                    <textarea name="message" id="message" cols="25" rows="5"></textarea>
                 </div>
-                <label for="password">Şehir</label>
-                <select name="sehir" id="">
-                    <option value="---" selected>---</option>
+                <label for="sehir">Şehir</label>
+                <select name="sehir" id="sehir">
+                    <option value="---" selected disabled>---</option>
                     <option value="Adana">Adana</option>
                     <option value="Adıyaman">Adıyaman</option>
                     <option value="Afyonkarahisar">Afyonkarahisar</option>
@@ -252,26 +245,30 @@
                     <option value="Düzce">Düzce</option>
                 </select>
                 <button type="submit" class="btn btn-sifirla">Gönder</button>
-                <button type="submit" class="btn btn-sifirla">Sıfırla</button>
+                <button type="reset" class="btn btn-sifirla">Sıfırla</button>
             </form>
         </div>
-        <div class="footer">
-            <img class="self-img" src="img/msmall.png" alt="Coder">
-            <div class="sosyal-logo">
-                <a id="facebook" href="#"><i class="fab fa-facebook"></i></a>
-                <a id="twitter" href="#"><i class="fab fa-twitter"></i></a>
-                <a id="instagram" href="#"><i class="fab fa-instagram"></i></a>
-                <a id="linkedin" href="#"><i class="fab fa-linkedin"></i></a>
-                <a id="discord" href="#"><i class="fab fa-discord"></i></a>
+        <footer class="footer">
+            <div class="footer-social-logo">
+                <a id="facebook" href="https://www.facebook.com/muratulker321" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a id="twitter" href="https://twitter.com/muratulker1993" target="_blank"><i
+                        class="fab fa-twitter"></i></a>
+                <a id="instagram" href="https://www.instagram.com/muratulker93/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a id="linkedin" href="https://www.linkedin.com/in/muratulker93/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
             </div>
-        </div>
-        <div class="footer-copy">
-            <p>
-                HP Proje © 2021 - Tüm Hakları Saklıdır.
-            </p>
-        </div>
-    </div>
-
+            <div class="footer-coder">
+                <img class="footer-coder-img" src="img/msmall.png" alt="Coder">
+                <a class="contact btn" href="kayıt.html">İletişim</a>
+            </div>
+            <div class="footer-copyright">
+                <p>
+                    Harry Potter Project © 2021 - All Rights Reserved.
+                </p>
+            </div>
+        </footer> 
 </body>
 
 </html>
