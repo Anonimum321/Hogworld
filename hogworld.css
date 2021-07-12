@@ -556,11 +556,6 @@ label {
     border-radius: 20px;
 }
 
-.container-kitap {
-    width: 300px;
-    height: 480px;
-}
-
 /* Responsive */
 
 @media (max-width:1400px) {
@@ -574,11 +569,6 @@ label {
 
     .houses-sidebar-img {
         width: 200px;
-    }
-
-    .container-kitap {
-        width: 200px;
-        height: 360px;
     }
 
     .books-album {
