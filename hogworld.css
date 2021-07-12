@@ -525,35 +525,33 @@ label {
 
 /* Kitaplar ve Filmler */
 
-.galeri {
+.books {
     display: grid;
-    grid-template-columns: repeat(minmax(400px, 1fr));
     grid-template-areas: 
     "header"
-    "album"
+    "books-album"
     "footer";
 }
 
-.album {
-    grid-area: album;
-    display: flex;
-    flex-wrap: wrap;
+.books-album {
+    grid-area: books-album;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.galeri-album {
+.books-album-content {
     background: rgba(255,255,255,.2);
     box-shadow: 0 0 5px rgba(0,0,0,.1);
-    margin: auto;
-    margin-bottom: 30px;
+    margin: auto auto 30px;
     padding: 20px;
     border-radius: 30px;
 }
 
-.container-foto {
+.books-album-inc {
     width: 380px;
 }
 
-.album-foto {
+.books-album-img {
     width: 100%;
     border-radius: 20px;
 }
@@ -582,6 +580,10 @@ label {
         width: 200px;
         height: 360px;
     }
+
+    .books-album {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 840px) {
@@ -592,6 +594,11 @@ label {
 
     .header {
         font-size: 14px;
+        grid-template-columns: 200px 200px;
+        grid-template-areas: 
+        "header-logo1   header-logo2"
+        "nav-bar        nav-bar";
+        margin: auto;
     }
 
     .nav-bar-list #ana,
@@ -626,10 +633,6 @@ label {
         padding: 10px;
     }
 
-    .houses-common-room img {
-        width: 360px;
-    } 
-
     .footer {
         grid-template-areas: 
         "footer-coder-img" 
@@ -643,7 +646,22 @@ label {
         padding: 10px;
     }
 
-    .container-foto {
+    .books-album-inc {
         width: 340px;
+    }
+
+    .books-album {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .houses-common-room {
+        width: 360px;
+    }
+}
+
+@media (max-width: 540px) {
+    
+    .books-album {
+        grid-template-columns: 1fr;
     }
 }
