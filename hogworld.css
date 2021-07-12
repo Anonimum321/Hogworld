@@ -38,6 +38,12 @@ main p {
     text-align: justify;
 }
 
+h2, h3 {
+    text-align: center;
+    font-size: 1.4em;
+    text-shadow: 2px 2px 4px var(--black);
+}
+
 .godric-gryffindor {
     background-image: url(img/topography.svg),
     linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% );
@@ -85,14 +91,6 @@ main p {
 
 .logo {
     width: 100%;
-}
-
-.main {
-    grid-area: main;
-}
-
-.sidebar {
-    grid-area: sidebar;
 }
 
 .nav-bar {
@@ -212,25 +210,19 @@ main p {
     transition: all .3s ease-out;
 }
 
-h2, h3 {
-    text-align: center;
-    font-size: 1.4em;
-    text-shadow: 2px 2px 4px var(--black);
-}
-
-.kurucular {
+.home-page {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-areas: 
     "header"
-    "home-page"
+    "home-page-main"
     "footer"
     "footer-copy";
 }
 
-.home-page {
+.home-page-main {
     display: grid;
-    grid-area: home-page;
+    grid-area: home-page-main;
     grid-template-areas: 
     "home-page-founder"
     "home-page-train";
@@ -242,7 +234,7 @@ h2, h3 {
     flex-wrap: wrap;
 }
 
-.kur {
+.founder-container {
     background: rgba(255,255,255,.2);
     box-shadow: 0 0 5px rgba(0,0,0,.1);
     width: 350px;
@@ -252,7 +244,7 @@ h2, h3 {
     border-radius: 30px;
 }
 
-.kurucu-foto {
+.founder-img {
     display: flex;
     margin: auto;
     width: 300px;
@@ -260,6 +252,11 @@ h2, h3 {
     object-fit: cover;
     object-position: top;
     border-radius: 10px;
+}
+
+.founder-detail p {
+    text-align: center;
+    margin-top: 10px;
 }
 
 .home-page-train {
@@ -271,92 +268,61 @@ h2, h3 {
     padding-top: 30px;
 }
 
-.tren h2 {
-    margin-bottom: 20px;
-    justify-self: center;
-    text-align: center;
-    font-size: 1.4em;
-}
+/* Founders */
 
-.kurucu-detay p {
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* Godric Gryffindor */
-
-.godric-div {
+.hogwarts-founders {
     display: grid;
     margin: auto;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-areas: 
-    "header              header"
-    "godric-img          godric-sidebar"
-    "godric-article      godric-article"
-    "footer              footer";
+    "header"
+    "founder-main"
+    "footer";
 }
 
-.godric-img {
-    grid-area: godric-img;
-    display: flex;
-    justify-content: end;
-    padding: 20px 20px;
+.founder-main {
+    display: grid;
+    grid-area: founder-main;
+    grid-template-areas: 
+    "founder-img         founder-sidebar"
+    "houses-article      houses-article";
 }
 
-.godric-sidebar {
-    grid-area: godric-sidebar;
+.founder-sidebar {
+    grid-area: founder-sidebar;
     display: flex;
     justify-content: center;
     padding: 20px 20px;
 }
 
-.godric-article {
-    grid-area: godric-article;
+.founder-sidebar a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.founder-sidebar a:hover {
+    color: #fff;
+    transition: .3s ease-out;
+}
+
+.houses-article {
+    grid-area: houses-article;
     margin-top: 20px;
     padding: 20px 20px;
 }
 
-.godric-article h2, .houses h2 {
+.houses-article h2, .houses h2 {
     text-align: left;
     margin-bottom: 10px;
 }
 
-.godric-article a {
+.houses-article a {
     color: var(--red);
     text-decoration: none;
 }
 
-.godric-article a:hover {
+.houses-article a:hover {
     color: var(--black);
-    transition: .3s ease-out;
-}
-
-.godric-article li {
-    list-style: none;
-}
-
-article p {
-    text-align: justify;
-}
-
-.godric-img img {
-    display: flex;
-    margin: auto;
-    width: 350px;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.godric-sidebar a {
-    text-decoration: none;
-    color: var(--black);
-}
-
-.godric-sidebar a:hover {
-    color: #fff;
     transition: .3s ease-out;
 }
 
@@ -403,10 +369,7 @@ article p {
     height: auto;
 }
 
-.houses-article {
-    grid-area: houses-article;
-    padding: 20px;
-}
+/* Footer */
 
 .footer {
     display: grid;
@@ -648,13 +611,11 @@ label {
         padding: 0;
     }
     
-    .godric-div {
-        grid-template-areas:
-        "header" 
-        "godric-img" 
-        "godric-sidebar"
-        "godric-article"
-        "footer";
+    .founder-main {
+        grid-template-areas: 
+        "founder-img"          
+        "founder-sidebar"
+        "houses-article";
     }
 
     .houses-sidebar-img {
