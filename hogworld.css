@@ -34,6 +34,10 @@ a {
     text-decoration: none;
 }
 
+main p {
+    text-align: justify;
+}
+
 .godric-gryffindor {
     background-image: url(img/topography.svg),
     linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% );
@@ -201,11 +205,7 @@ a {
     display: inline-block;
 }
 
-/* main */
-
-main p {
-    text-align: justify;
-}
+/* Home Page */
 
 .home-page-founder img:hover {
     filter: opacity(.8);
@@ -367,18 +367,22 @@ article p {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin: auto;
     grid-template-areas:
-    "header         header          header"
-    "ortak-salon    ortak-salon     bina-sbar"
-    "bina-article   bina-article    bina-sbar"
-    "footer         footer          footer";
+    "header"
+    "houses-main"
+    "footer";
 }
 
-.ortak-salon {
-    grid-area: ortak-salon;
-    padding: 20px 20px;
+.houses-main {
+    grid-area: houses-main;
+    display: grid;
+    grid-template-areas: 
+    "houses-common-room    houses-common-room      houses-sidebar"
+    "houses-article        houses-article          houses-sidebar";
 }
 
-.ortak-salon img {
+.houses-common-room {
+    grid-area: houses-common-room;
+    padding: 20px;
     width: 800px;
     display: flex;
     margin: auto;
@@ -386,49 +390,27 @@ article p {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.bina-sbar {
-    grid-area: bina-sbar;
+.houses-sidebar {
+    grid-area: houses-sidebar;
     display: flex;
     margin: auto;
-    padding: 20px 20px;
+    padding: 20px;
 }
 
-.bina-sbar ul {
-    margin-top: 20px;
-}
-
-.bina-sbar li {
-    list-style: none;
-    display: list-item;
-    margin-top: 5px;
-}
-
-.bina-sbar a {
-    text-decoration: none;
-    color: var(--black);
-}
-
-.bina-sbar a:hover {
-    color: white;
-    transition: .3s ease-out;
-}
-
-.figures {
+.houses-sidebar-img {
     display: flex;
-}
-
-.figures img {
     width: 100%;
     height: auto;
 }
 
-.bina-article {
-    grid-area: bina-article;
-    padding: 20px 20px;
+.houses-article {
+    grid-area: houses-article;
+    padding: 20px;
 }
 
 .footer {
     display: grid;
+    margin-top: 30px;
     grid-template-columns: repeat(auto-fit minmax(400px, 1fr));
     grid-area: footer;
     background-color: rgba(0, 0, 0, .3);
@@ -562,7 +544,8 @@ form button {
 }
 
 input, textarea, select {
-    width: 100%;
+    width: 25%;
+    display: block;
     padding: 10px 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -621,17 +604,14 @@ label {
 
 @media (max-width:1400px) {
 
-    .houses {
-        grid-template-areas:
-        "header"
-        "ortak-salon"
-        "bina-sbar"
-        "bina-article"
-        "footer";        
+    .houses-main {
+        grid-template-areas: 
+        "houses-common-room"
+        "houses-sidebar"
+        "houses-article";
     }
 
-    .figures {
-        display: flex;
+    .houses-sidebar-img {
         width: 200px;
     }
 
@@ -677,18 +657,17 @@ label {
         "footer";
     }
 
+    .houses-sidebar-img {
+        width: 100px;
+    }
+
     .home-page-founder {
         padding: 10px;
     }
 
-    .ortak-salon img {
+    .houses-common-room img {
         width: 360px;
-    }
-
-    .figures {
-        display: flex;
-        width: 100px;
-    }  
+    } 
 
     .footer {
         grid-template-areas: 
@@ -698,12 +677,12 @@ label {
         "footer-copyright";
     }
 
-    .container-foto {
-        width: 340px;
-    }
-
     .footer-social-logo a i {
         font-size: 20px;
         padding: 10px;
+    }
+
+    .container-foto {
+        width: 340px;
     }
 }
