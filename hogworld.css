@@ -476,16 +476,21 @@ h2, h3 {
     transition: 0.3s ease-out;
 }
 
-/* Kayıt ve İletişim*/
+/* Register & Contact*/
 
 .form {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-areas: 
     "header"
-    "form-register"
-    "form-contact"
+    "form-main"
     "footer";
+}
+
+.form-main {
+    display: grid;
+    grid-template-areas: 
+    "form-register"
+    "form-contact";
 }
 
 .form-register {
