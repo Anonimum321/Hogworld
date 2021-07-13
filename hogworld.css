@@ -483,18 +483,18 @@ h2, h3 {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-areas: 
     "header"
-    "kayit"
-    "iletisim"
+    "form-register"
+    "form-contact"
     "footer";
 }
 
-.kayit {
-    grid-area: kayit;
+.form-register {
+    grid-area: form-register;
     padding: 20px;
 }
 
-.iletisim {
-    grid-area: iletisim;
+.form-contact {
+    grid-area: form-contact;
     padding: 20px;
 }
 
@@ -507,7 +507,7 @@ form button {
 }
 
 input, textarea, select {
-    width: 25%;
+    width: 100%;
     display: block;
     padding: 10px 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -623,19 +623,6 @@ label {
         padding: 10px;
     }
 
-    .footer {
-        grid-template-areas: 
-        "footer-coder-img" 
-        "footer-social-logo"
-        "contact"
-        "footer-copyright";
-    }
-
-    .footer-social-logo a i {
-        font-size: 20px;
-        padding: 10px;
-    }
-
     .books-album-inc {
         width: 340px;
     }
@@ -646,6 +633,22 @@ label {
 
     .houses-common-room {
         width: 360px;
+    }
+
+    .footer {
+        grid-template-areas: 
+        "footer-coder"
+        "footer-social-logo"
+        "footer-copyright";
+    }
+
+    .footer-coder-img {
+        width: 150px;
+    }
+
+    .footer-social-logo a i {
+        font-size: 20px;
+        padding: 10px;
     }
 }
 
