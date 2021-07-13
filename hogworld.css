@@ -28,6 +28,7 @@ body {
     radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     background-attachment: fixed;
     letter-spacing: -1px;
+    line-height: 200%;
 }
 
 a {
@@ -282,16 +283,22 @@ h2, h3 {
 .founder-main {
     display: grid;
     grid-area: founder-main;
+    position: relative;
+    grid-template-columns: 5fr 1fr;
     grid-template-areas: 
     "founder-img         founder-sidebar"
-    "houses-article      houses-article";
+    "houses-article      founder-sidebar";
 }
 
 .founder-sidebar {
     grid-area: founder-sidebar;
     display: flex;
-    justify-content: center;
+    position: sticky;
+    top: 0px;
+    justify-content: flex-end;
     padding: 20px 20px;
+    align-self: flex-start;
+    margin-right: 50px;
 }
 
 .founder-sidebar a {
@@ -302,6 +309,10 @@ h2, h3 {
 .founder-sidebar a:hover {
     color: #fff;
     transition: .3s ease-out;
+}
+
+.founder-sidebar ol li ol li {
+    margin-left: 25px;
 }
 
 .houses-article {
@@ -433,7 +444,7 @@ h2, h3 {
 }
 
 .footer-social-logo #facebook:hover {
-    color: #3b5998;
+    color: #4867aa;
     transition: 0.3s ease-out;
 }
 
@@ -443,7 +454,7 @@ h2, h3 {
 }
 
 .footer-social-logo #twitter:hover {
-    color: #00aced;
+    color: #1c9ceb;
     transition: 0.3s ease-out;
 }
 
@@ -453,7 +464,7 @@ h2, h3 {
 }
 
 .footer-social-logo #instagram:hover {
-    color: #E1306C;
+    color: #d62f89;
     transition: 0.3s ease-out;
 }
 
@@ -463,17 +474,7 @@ h2, h3 {
 }
 
 .footer-social-logo #linkedin:hover {
-    color: #007bb6;
-    transition: 0.3s ease-out;
-}
-
-.footer-social-logo #discord {
-    color: #fff;
-    transition: 0.3s ease-out;
-}
-
-.footer-social-logo #discord:hover {
-    color: #00adfdcc;
+    color: #0a66c2;
     transition: 0.3s ease-out;
 }
 
@@ -630,12 +631,10 @@ label {
         border-radius: 5px;
         padding: 0;
     }
-    
-    .founder-main {
-        grid-template-areas: 
-        "founder-img"          
-        "founder-sidebar"
-        "houses-article";
+
+    .founder-img {
+        width: 200px;
+        height: 200px;
     }
 
     .houses-sidebar-img {
