@@ -648,6 +648,7 @@ label {
 
     .houses-common-room {
         width: 360px;
+        height: auto;
     }
 
     .footer {
