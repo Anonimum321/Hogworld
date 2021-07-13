@@ -216,8 +216,7 @@ h2, h3 {
     grid-template-areas: 
     "header"
     "home-page-main"
-    "footer"
-    "footer-copy";
+    "footer";
 }
 
 .home-page-main {
@@ -604,11 +603,13 @@ label {
 
     .header {
         font-size: 14px;
-        grid-template-columns: 200px 200px;
-        grid-template-areas: 
-        "header-logo1   header-logo2"
-        "nav-bar        nav-bar";
         margin: auto;
+    }
+
+    .nav-bar-list {
+        padding: 0;
+        margin-bottom: 0;
+        text-align: center;
     }
 
     .nav-bar-list #ana,
