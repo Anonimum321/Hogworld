@@ -530,35 +530,54 @@ label {
 
 /* Kitaplar ve Filmler */
 
-.books {
+.movies {
     display: grid;
     grid-template-areas: 
     "header"
-    "books-album"
+    "movies-album"
     "footer";
 }
 
-.books-album {
-    grid-area: books-album;
+.movies-album {
+    grid-area: movies-album;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
-.books-album-content {
+.movies-album-inc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: rgba(255,255,255,.2);
     box-shadow: 0 0 5px rgba(0,0,0,.1);
-    margin: auto auto 30px;
-    padding: 20px;
-    border-radius: 30px;
+    margin: auto auto 20px;
+    border-radius: 10px;
+    width: 380px;
+}
+
+.movies-album-img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .books-album-inc {
-    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    margin: auto auto 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 480px;
 }
 
 .books-album-img {
     width: 100%;
-    border-radius: 20px;
+    height: 420px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /* Responsive */
@@ -574,10 +593,6 @@ label {
 
     .houses-sidebar-img {
         width: 200px;
-    }
-
-    .books-album {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -628,14 +643,6 @@ label {
         padding: 10px;
     }
 
-    .books-album-inc {
-        width: 340px;
-    }
-
-    .books-album {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .houses-common-room {
         width: 360px;
     }
@@ -654,12 +661,5 @@ label {
     .footer-social-logo a i {
         font-size: 20px;
         padding: 10px;
-    }
-}
-
-@media (max-width: 540px) {
-    
-    .books-album {
-        grid-template-columns: 1fr;
     }
 }
