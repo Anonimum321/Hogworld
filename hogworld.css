@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 :root {
     --yellow: #d1aa42;
     --black: #272727;
@@ -8,7 +6,7 @@
     --closegreen: #0f490f;
     --red: #801c14;
     --blue: #5676a5;
-
+    --white: rgb(192, 185, 185);
 }
 
 * {
@@ -17,17 +15,21 @@
     box-sizing: border-box;
 }
 
+*:before, *:after {
+    box-sizing: inherit;
+}
+
 html {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
     font-size: 16px;
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
-    color: var(--black);
+    color: var(--white);
 }
 
 body {
-    background-image: url(img/topography.svg),
-        radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    background-image: url(./img-background/darkness-hogworld.jpg);
+    /*radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);*/
     background-attachment: fixed;
     letter-spacing: -1px;
     line-height: 200%;
@@ -44,49 +46,160 @@ main p {
 h2, h3 {
     text-align: center;
     font-size: 1.4em;
-    text-shadow: 2px 2px 4px var(--black);
+    text-shadow: 2px 2px 4px var(--white);
 }
 
 .godric-gryffindor {
-    background-image: url(img/topography.svg),
-        linear-gradient(112.7deg, rgba(253, 185, 83, 1) 11.4%, rgba(255, 138, 0, 1) 70.2%);
+    background-image: url(./img-background/darkness-hogworld.jpg);
+    /*linear-gradient(112.7deg, rgba(253, 185, 83, 1) 11.4%, rgba(255, 138, 0, 1) 70.2%);*/
 }
 
 .salazar-slytherin {
-    background-image: url(img/topography.svg),
-        linear-gradient(102.1deg, rgba(96, 221, 142, 1) 8.7%, rgba(24, 138, 141, 1) 88.1%);
+    background-image: url(./img-background/darkness-hogworld.jpg);
+    /*linear-gradient(102.1deg, rgba(96, 221, 142, 1) 8.7%, rgba(24, 138, 141, 1) 88.1%);*/
 }
 
 .rowena-ravenclaw {
-    background-image: url(img/topography.svg),
-        linear-gradient(179.4deg, rgba(33, 150, 243, 1) 1.8%, rgba(22, 255, 245, 0.60) 97.1%);
+    background-image: url(./img-background/darkness-hogworld.jpg);
+    /*linear-gradient(179.4deg, rgba(33, 150, 243, 1) 1.8%, rgba(22, 255, 245, 0.60) 97.1%);*/
 }
 
 .helga-hufflepuff {
-    background-image: url(img/topography.svg),
-        radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 252, 200, 1) 0%, rgba(255, 247, 94, 1) 90%);
+    background-image: url(./img-background/darkness-hogworld.jpg);
+    /*radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 252, 200, 1) 0%, rgba(255, 247, 94, 1) 90%);*/
+}
+
+/* ---------- Nav Index ---------- */
+
+.flex-images {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.flex-image {
+    background: #6B0F9C;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    align-items: center;
+    transition:
+        font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hogwarts-flex-image {
+    background-image: url(./img-nav-menu/hogwarst-burning.jpg);
+}
+
+.gryffindor-flex-image {
+    background-image: url(./img-nav-menu/harry-suit.jpg);
+}
+
+.slytherin-flex-image {
+    background-image: url(./img-nav-menu/draco-on-fire.jpg);
+}
+
+.rawenclaw-flex-image {
+    background-image: url(./img-nav-menu/luna-lovegood-lion-head.jpg);
+}
+
+.hufflepuff-flex-image {
+    background-image: url(./img-nav-menu/cedric-diggory-with-wand.png);
+}
+
+.flex-image>* {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-image > *:first-child { transform: translateY(-100%); }
+.flex-image.open-active > *:first-child { transform: translateY(0); }
+.flex-image > *:last-child { transform: translateY(100%); }
+.flex-image.open-active > *:last-child { transform: translateY(0); }
+
+.flex-image p {
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 1rem;
+    align-items: center;
+}
+
+.flex-image p:nth-child(2) {
+    font-size: 1rem;
+}
+
+.flex-open {
+    flex: 5;
+    font-size: 1.3rem;
+}
+
+.nav-index-links {
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+.nav-index-links-index:hover {
+    color: var(--green);
+    font-size: 1.5rem;
+    transition: .2s ease-in;
+}
+
+.nav-index-links-gryffindor:hover {
+    color: var(--red);
+    font-size: 1.5rem;
+    transition: .2s ease-in;
+}
+
+.nav-index-links-slytherin:hover {
+    color: var(--closegreen);
+    font-size: 1.5rem;
+    transition: .2s ease-in;
+}
+
+.nav-index-links-ravenclaw:hover {
+    color: var(--blue);
+    font-size: 1.5rem;
+    transition: .2s ease-in;
+}
+
+.nav-index-links-hufflepuff:hover {
+    color: var(--yellow);
+    font-size: 1.5rem;
+    transition: .2s ease-in;
 }
 
 /* ---------- Header & Nav-Bar ---------- */
 
 .header {
     grid-area: header;
-    display: grid;
-    grid-template-columns: 150px 1fr 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 150px;
-    grid-template-areas: "header-logo1 nav-bar header-logo2";
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .header-logo1 {
-    grid-area: header-logo1;
     display: flex;
     margin: auto;
     width: 100px;
 }
 
 .header-logo2 {
-    grid-area: header-logo2;
     display: flex;
     margin: auto;
     width: 100px;
@@ -97,9 +210,9 @@ h2, h3 {
 }
 
 .nav-bar {
-    grid-area: nav-bar;
     display: flex;
     margin: auto;
+    justify-content: space-between;
 }
 
 .nav-bar-list {
@@ -107,18 +220,19 @@ h2, h3 {
     background-color: rgba(0, 0, 0, .3);
     padding: 30px 30px;
     border-radius: 40px;
+    display: flex;
 }
 
 .nav-bar-list a {
-    color: #000;
+    color: var(--white);
     text-decoration: none;
     font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .nav-bar-list li {
-    display: inline-block;
     padding: 0 20px;
-    color: #000;
+    color: var(--white);
 }
 
 .nav-bar-list #ana {
@@ -186,6 +300,21 @@ h2, h3 {
     padding: 10px;
 }
 
+.nav-bar-burger {
+    display: none;
+    align-self: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav-bar-burger div {
+    width: 24px;
+    height: 1.7px;
+    background-color: var(--white);
+    margin: 5px;
+    transition: all .5s ease;
+}
+
 .btn {
     background-image: linear-gradient(to right, #1A2980 0%, #26D0CE 51%, #1A2980 100%);
     transition: 0.5s;
@@ -206,11 +335,12 @@ h2, h3 {
     display: inline-block;
 }
 
+
 /* ---------- Clock ---------- */
 
 .clock {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     border: 1px solid var(--black);
     margin: auto;
@@ -324,7 +454,7 @@ h2, h3 {
     display: flex;
     justify-content: center;
     margin-top: 40px;
-    border-top: 1px solid var(--black);
+    border-top: 1px solid var(--white);
     padding-top: 30px;
 }
 
@@ -363,7 +493,7 @@ h2, h3 {
 
 .founder-sidebar a {
     text-decoration: none;
-    color: var(--black);
+    color: var(--white);
 }
 
 .founder-sidebar a:hover {
@@ -392,7 +522,7 @@ h2, h3 {
 }
 
 .houses-article a:hover {
-    color: var(--black);
+    color: var(--white);
     transition: .3s ease-out;
 }
 
@@ -646,7 +776,74 @@ label {
 
 /* ---------- Responsive ---------- */
 
-@media (max-width:1400px) {
+@media (max-width:1366px) {
+
+    html {
+        font-size: 13px;
+    }
+
+    .header {
+        font-size: 1.2rem;
+        margin: auto;
+        width: 100%;
+    }
+
+    .nav-bar-burger {
+        padding: 6px;
+    }
+
+    .nav-bar-burger-inc .nav-bar-burger-inc-1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .nav-bar-burger-inc .nav-bar-burger-inc-2 {
+        opacity: 0;
+    }
+    
+    .nav-bar-burger-inc .nav-bar-burger-inc-3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }    
+
+    .nav-bar-list {
+        flex-direction: column;
+        transform: translateY(-150%);
+        transition: 0.5s ease-in;
+    }
+
+    .nav-bar-list-active {
+        transform: translateY(0);
+    }
+
+    .nav-bar-list li {
+        opacity: 0;
+    }
+
+    .nav-bar-burger {
+        display: block;
+        
+    }
+
+    .nav-bar-list #ana,
+    .nav-bar-list #gry,
+    .nav-bar-list #sly,
+    .nav-bar-list #rav,
+    .nav-bar-list #huf {
+        padding: 5px;
+    }
+
+    .nav-bar-list #ana:hover,
+    .nav-bar-list #gry:hover,
+    .nav-bar-list #sly:hover,
+    .nav-bar-list #rav:hover,
+    .nav-bar-list #huf:hover {
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .main-active {
+        margin-top: 12vh;
+        transition: 0.5s ease-in-out;
+    }
 
     .houses-main {
         grid-template-areas:
@@ -663,12 +860,18 @@ label {
 @media (max-width: 840px) {
 
     html {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .header {
-        font-size: 14px;
+        font-size: 1.2rem;
         margin: auto;
+        width: 100%;
+    }
+
+    .nav-bar-burger {
+        align-self: center;
+        justify-content: center;
     }
 
     .nav-bar-list {
@@ -682,7 +885,7 @@ label {
     .nav-bar-list #sly,
     .nav-bar-list #rav,
     .nav-bar-list #huf {
-        padding: 0;
+        padding: 2px;
     }
 
     .nav-bar-list #ana:hover,
@@ -691,7 +894,19 @@ label {
     .nav-bar-list #rav:hover,
     .nav-bar-list #huf:hover {
         border-radius: 5px;
-        padding: 0;
+        padding: 2px;
+    }
+
+    .seconds {
+        top: 52%;
+    }
+
+    .mins {
+        top: 52%;
+    }
+
+    .hours {
+        top: 52%;
     }
 
     .founder-img {
@@ -701,6 +916,14 @@ label {
 
     .houses-sidebar-img {
         width: 100px;
+    }
+
+    .main-page {
+        margin-top: 0;
+    }
+
+    .home-page-mainx {
+        margin-top: 0;
     }
 
     .home-page-founder {
@@ -726,5 +949,17 @@ label {
     .footer-social-logo a i {
         font-size: 20px;
         padding: 10px;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(-50px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
     }
 }
