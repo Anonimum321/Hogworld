@@ -25,7 +25,7 @@ html {
 
 body {
     background-image: url(img/topography.svg),
-    radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     background-attachment: fixed;
     letter-spacing: -1px;
     line-height: 200%;
@@ -47,25 +47,25 @@ h2, h3 {
 
 .godric-gryffindor {
     background-image: url(img/topography.svg),
-    linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% );
+        linear-gradient(112.7deg, rgba(253, 185, 83, 1) 11.4%, rgba(255, 138, 0, 1) 70.2%);
 }
 
 .salazar-slytherin {
     background-image: url(img/topography.svg),
-    linear-gradient( 102.1deg,  rgba(96,221,142,1) 8.7%, rgba(24,138,141,1) 88.1% );
+        linear-gradient(102.1deg, rgba(96, 221, 142, 1) 8.7%, rgba(24, 138, 141, 1) 88.1%);
 }
 
 .rowena-ravenclaw {
     background-image: url(img/topography.svg),
-    linear-gradient( 179.4deg,  rgba(33,150,243,1) 1.8%, rgba(22,255,245,0.60) 97.1% );
+        linear-gradient(179.4deg, rgba(33, 150, 243, 1) 1.8%, rgba(22, 255, 245, 0.60) 97.1%);
 }
 
 .helga-hufflepuff {
     background-image: url(img/topography.svg),
-    radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,252,200,1) 0%, rgba(255,247,94,1) 90% );
+        radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 252, 200, 1) 0%, rgba(255, 247, 94, 1) 90%);
 }
 
-/* Header & Nav-Bar */
+/* ---------- Header & Nav-Bar ---------- */
 
 .header {
     grid-area: header;
@@ -126,7 +126,7 @@ h2, h3 {
 
 .nav-bar-list #ana:hover {
     color: #fff;
-    background-image: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background-image: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
     transition: all .3s ease-in-out;
     border-radius: 30px;
     padding: 10px;
@@ -139,7 +139,7 @@ h2, h3 {
 
 .nav-bar-list #gry:hover {
     color: #fff;
-    background-image: linear-gradient( 112.7deg,  rgba(253,185,83,1) 11.4%, rgba(255,138,0,1) 70.2% );
+    background-image: linear-gradient(112.7deg, rgba(253, 185, 83, 1) 11.4%, rgba(255, 138, 0, 1) 70.2%);
     transition: all .4s ease-out;
     border-radius: 30px;
     padding: 10px;
@@ -152,7 +152,7 @@ h2, h3 {
 
 .nav-bar-list #sly:hover {
     color: #fff;
-    background-image: linear-gradient( 102.1deg,  rgba(96,221,142,1) 8.7%, rgba(24,138,141,1) 88.1% );
+    background-image: linear-gradient(102.1deg, rgba(96, 221, 142, 1) 8.7%, rgba(24, 138, 141, 1) 88.1%);
     transition: all .3s ease-out;
     border-radius: 30px;
     padding: 10px;
@@ -165,7 +165,7 @@ h2, h3 {
 
 .nav-bar-list #rav:hover {
     color: #fff;
-    background-image: linear-gradient( 179.4deg,  rgba(33,150,243,1) 1.8%, rgba(22,255,245,0.60) 97.1% );
+    background-image: linear-gradient(179.4deg, rgba(33, 150, 243, 1) 1.8%, rgba(22, 255, 245, 0.60) 97.1%);
     transition: all .3s ease-out;
     border-radius: 30px;
     padding: 10px;
@@ -178,14 +178,14 @@ h2, h3 {
 
 .nav-bar-list #huf:hover {
     color: #fff;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,252,200,1) 0%, rgba(255,247,94,1) 90% );
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 252, 200, 1) 0%, rgba(255, 247, 94, 1) 90%);
     transition: all .3s ease-out;
     border-radius: 30px;
     padding: 10px;
 }
 
 .btn {
-    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE 51%, #1A2980 100%);
     transition: 0.5s;
     text-align: center;
     padding: 10px 20px;
@@ -204,7 +204,65 @@ h2, h3 {
     display: inline-block;
 }
 
-/* Home Page */
+/* ---------- Clock ---------- */
+
+.clock {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid var(--black);
+    margin: auto;
+    position: relative;
+    padding: 2rem;
+    background-image: url(./img/albus-dumbledore-dark.png);
+    background-position: center;
+    background-size: cover;
+    box-shadow:
+        0 0 0 4px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 3px var(--black),
+        inset 0 0 10px black,
+        0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+    /* account for the height of the clock hands */
+}
+
+.clock-bars {
+    position: absolute;
+    transform-origin: 100%;
+    transform: rotate(90deg)
+}
+
+.seconds {
+    width: 70%;
+    height: 2px;
+    top: 60%;
+    right: 50%;
+    background: grey;
+}
+
+.mins {
+    width: 70%;
+    height: 2px;
+    top: 60%;
+    right: 50%;
+    background: grey;
+}
+
+.hours {
+    width: 70%;
+    height: 2px;
+    top: 60%;
+    right: 50%;
+    background: var(--red);
+}
+
+/* ---------- Home Page ---------- */
 
 .home-page-founder img:hover {
     filter: opacity(.8);
@@ -214,18 +272,18 @@ h2, h3 {
 .home-page {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-template-areas: 
-    "header"
-    "home-page-main"
-    "footer";
+    grid-template-areas:
+        "header"
+        "home-page-main"
+        "footer";
 }
 
 .home-page-main {
     display: grid;
     grid-area: home-page-main;
-    grid-template-areas: 
-    "home-page-founder"
-    "home-page-train";
+    grid-template-areas:
+        "home-page-founder"
+        "home-page-train";
 }
 
 .home-page-founder {
@@ -235,8 +293,8 @@ h2, h3 {
 }
 
 .founder-container {
-    background: rgba(255,255,255,.2);
-    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
     width: 350px;
     margin: auto;
     margin-bottom: 30px;
@@ -268,16 +326,16 @@ h2, h3 {
     padding-top: 30px;
 }
 
-/* Founders */
+/* ---------- Founders ---------- */
 
 .hogwarts-founders {
     display: grid;
     margin: auto;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-template-areas: 
-    "header"
-    "founder-main"
-    "footer";
+    grid-template-areas:
+        "header"
+        "founder-main"
+        "footer";
 }
 
 .founder-main {
@@ -285,9 +343,9 @@ h2, h3 {
     grid-area: founder-main;
     position: relative;
     grid-template-columns: 5fr 1fr;
-    grid-template-areas: 
-    "founder-img         founder-sidebar"
-    "houses-article      founder-sidebar";
+    grid-template-areas:
+        "founder-img         founder-sidebar"
+        "houses-article      founder-sidebar";
 }
 
 .founder-sidebar {
@@ -336,24 +394,24 @@ h2, h3 {
     transition: .3s ease-out;
 }
 
-/* Houses */
+/* ---------- Houses ---------- */
 
 .houses {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin: auto;
     grid-template-areas:
-    "header"
-    "houses-main"
-    "footer";
+        "header"
+        "houses-main"
+        "footer";
 }
 
 .houses-main {
     grid-area: houses-main;
     display: grid;
-    grid-template-areas: 
-    "houses-common-room    houses-common-room      houses-sidebar"
-    "houses-article        houses-article          houses-sidebar";
+    grid-template-areas:
+        "houses-common-room    houses-common-room      houses-sidebar"
+        "houses-article        houses-article          houses-sidebar";
 }
 
 .houses-common-room {
@@ -381,7 +439,7 @@ h2, h3 {
     height: auto;
 }
 
-/* Footer */
+/* ---------- Footer ---------- */
 
 .footer {
     display: grid;
@@ -389,7 +447,7 @@ h2, h3 {
     grid-template-columns: repeat(auto-fit minmax(400px, 1fr));
     grid-area: footer;
     background-color: rgba(0, 0, 0, .3);
-    grid-template-areas: 
+    grid-template-areas:
         "footer-coder     footer-social-logo"
         "footer-copyright footer-copyright";
 }
@@ -397,9 +455,9 @@ h2, h3 {
 .footer-coder {
     display: grid;
     grid-area: footer-coder;
-    grid-template-areas: 
-    "footer-coder-img"
-    "contact";
+    grid-template-areas:
+        "footer-coder-img"
+        "contact";
 }
 
 .contact {
@@ -469,7 +527,7 @@ h2, h3 {
 }
 
 .footer-social-logo #linkedin {
-    color: #fff ;
+    color: #fff;
     transition: 0.3s ease-out;
 }
 
@@ -478,21 +536,21 @@ h2, h3 {
     transition: 0.3s ease-out;
 }
 
-/* Register & Contact*/
+/* ---------- Register & Contact ---------- */
 
 .form {
     display: grid;
-    grid-template-areas: 
-    "header"
-    "form-main"
-    "footer";
+    grid-template-areas:
+        "header"
+        "form-main"
+        "footer";
 }
 
 .form-main {
     display: grid;
-    grid-template-areas: 
-    "form-register"
-    "form-contact";
+    grid-template-areas:
+        "form-register"
+        "form-contact";
 }
 
 .form-register {
@@ -530,14 +588,14 @@ label {
     margin-bottom: 4px;
 }
 
-/* Kitaplar ve Filmler */
+/* ---------- Books and Movies ---------- */
 
 .movies {
     display: grid;
-    grid-template-areas: 
-    "header"
-    "movies-album"
-    "footer";
+    grid-template-areas:
+        "header"
+        "movies-album"
+        "footer";
 }
 
 .movies-album {
@@ -550,8 +608,8 @@ label {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: rgba(255,255,255,.2);
-    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
     margin: auto auto 20px;
     border-radius: 10px;
     width: 380px;
@@ -561,14 +619,16 @@ label {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    background-position: center;
+    background-size: cover;
 }
 
 .books-album-inc {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: rgba(255,255,255,.2);
-    box-shadow: 0 0 5px rgba(0,0,0,.1);
+    background: rgba(255, 255, 255, .2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
     margin: auto auto 20px;
     border-radius: 10px;
     width: 300px;
@@ -582,15 +642,15 @@ label {
     border-top-right-radius: 10px;
 }
 
-/* Responsive */
+/* ---------- Responsive ---------- */
 
 @media (max-width:1400px) {
 
     .houses-main {
-        grid-template-areas: 
-        "houses-common-room"
-        "houses-sidebar"
-        "houses-article";
+        grid-template-areas:
+            "houses-common-room"
+            "houses-sidebar"
+            "houses-article";
     }
 
     .houses-sidebar-img {
@@ -623,7 +683,7 @@ label {
         padding: 0;
     }
 
-    .nav-bar-list #ana:hover, 
+    .nav-bar-list #ana:hover,
     .nav-bar-list #gry:hover,
     .nav-bar-list #sly:hover,
     .nav-bar-list #rav:hover,
@@ -651,10 +711,10 @@ label {
     }
 
     .footer {
-        grid-template-areas: 
-        "footer-coder"
-        "footer-social-logo"
-        "footer-copyright";
+        grid-template-areas:
+            "footer-coder"
+            "footer-social-logo"
+            "footer-copyright";
     }
 
     .footer-coder-img {
