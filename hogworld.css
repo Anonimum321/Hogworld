@@ -30,7 +30,7 @@ html {
 }
 
 body {
-    background-image: url(./img-background/darkness-hogworld.jpg);
+    background-image: url(./img/img-background/darkness-hogworld.jpg);
     /*radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);*/
     background-attachment: fixed;
     letter-spacing: -1px;
@@ -52,22 +52,22 @@ h2, h3 {
 }
 
 .godric-gryffindor {
-    background-image: url(./img-background/darkness-hogworld.jpg);
+    background-image: url(./img/img-background/darkness-hogworld.jpg);
     /*linear-gradient(112.7deg, rgba(253, 185, 83, 1) 11.4%, rgba(255, 138, 0, 1) 70.2%);*/
 }
 
 .salazar-slytherin {
-    background-image: url(./img-background/darkness-hogworld.jpg);
+    background-image: url(./img/img-background/darkness-hogworld.jpg);
     /*linear-gradient(102.1deg, rgba(96, 221, 142, 1) 8.7%, rgba(24, 138, 141, 1) 88.1%);*/
 }
 
 .rowena-ravenclaw {
-    background-image: url(./img-background/darkness-hogworld.jpg);
+    background-image: url(./img/img-background/darkness-hogworld.jpg);
     /*linear-gradient(179.4deg, rgba(33, 150, 243, 1) 1.8%, rgba(22, 255, 245, 0.60) 97.1%);*/
 }
 
 .helga-hufflepuff {
-    background-image: url(./img-background/darkness-hogworld.jpg);
+    background-image: url(./img/img-background/darkness-hogworld.jpg);
     /*radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 252, 200, 1) 0%, rgba(255, 247, 94, 1) 90%);*/
 }
 
@@ -100,23 +100,23 @@ h2, h3 {
 }
 
 .hogwarts-flex-image {
-    background-image: url(./img-nav-menu/hogwarst-burning.jpg);
+    background-image: url(./img/img-nav-menu/hogwarst-burning.jpg);
 }
 
 .gryffindor-flex-image {
-    background-image: url(./img-nav-menu/harry-suit.jpg);
+    background-image: url(./img/img-nav-menu/harry-suit.jpg);
 }
 
 .slytherin-flex-image {
-    background-image: url(./img-nav-menu/draco-on-fire.jpg);
+    background-image: url(./img/img-nav-menu/draco-on-fire.jpg);
 }
 
 .rawenclaw-flex-image {
-    background-image: url(./img-nav-menu/luna-lovegood-lion-head.jpg);
+    background-image: url(./img/img-nav-menu/luna-lovegood-lion-head.jpg);
 }
 
 .hufflepuff-flex-image {
-    background-image: url(./img-nav-menu/cedric-diggory-with-wand.png);
+    background-image: url(./img/img-nav-menu/cedric-diggory-with-wand.png);
 }
 
 .flex-image>* {
